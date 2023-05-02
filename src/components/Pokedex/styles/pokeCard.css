@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,300;0,400;1,900&family=Work+Sans:wght@100;200;300;400;600;800&display=swap');
+
+* {
+    font-family: Roboto;
+}
+
+.poke-container {
+    margin: .7em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.pokemon {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 0.8em;
+    overflow: hidden;
+    border: 0.5em solid rgb(155, 154, 154);
+
+}
+
+.pokemon:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.pokemon__header {
+    background-color: rgb(180, 180, 180);
+    height: 155px;
+    position: relative;
+}
+
+.pokemon__sprite {
+    width: 50%;
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pokemon__body {
+    padding: 1em;
+    padding-top: 70px;
+}
+
+.pokemon__name {
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pokemon__types {
+    padding: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+
+}
+
+.pokemon__type-specific {
+    text-transform: capitalize;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4F4F4F;
+}
+
+.pokemon__type-specific:nth-child(2) {
+    position: relative;
+}
+
+.pokemon__type-specific:nth-child(2)::before {
+    content: '/';
+    position: absolute;
+    left: -0.6em;
+}
+
+.pokemon__stats {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    font-size: 0.8rem;
+    row-gap: 2em;
+    padding: 2em;
+}
+
+.pokemon__stats-specific {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.pokemon__stats-label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9F9F9F;
+    text-transform: uppercase
+}
+
+/* ---------------------------------------------------  styles de las card por tipos   ------------------------------------------------------------------------------------ */
+
+/* ----------------------------------------------------              type NORMAL        ------------------------------------ */
+
+.bg-normal {
+    background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-normal {
+    color: #7C3F4C;
+}
+
+.border-normal {
+    border-color: #7C3F4C;
+}
+
+/* ----------------------------------------------------              type FIGHTING        ------------------------------------ */
+
+.bg-fighting {
+    background: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-fighting {
+    color: #F1613C;
+}
+
+.border-fighting {
+    border-color: #F1613C;
+}
+
+/* ----------------------------------------------------              type FLYING        ------------------------------------ */
+
+.bg-flying {
+    background: linear-gradient(176.83deg, #84ccf9 -8.78%, #f2f8f9 169.09%, #05acff 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-flying {
+    color: #84ccf9;
+}
+
+.border-flying {
+    border-color: #84ccf9;
+}
+
+/* ----------------------------------------------------              type POISON        ------------------------------------ */
+
+.bg-poison {
+    background: linear-gradient(176.83deg, #9584f9 -8.78%, #c3a3f1 169.09%, #9705ff 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-poison {
+    color: #9584f9;
+}
+
+.border-poison {
+    border-color: #9584f9;
+}
+
+/* ----------------------------------------------------              type GROUND        ------------------------------------ */
+
+.bg-ground {
+    background: linear-gradient(176.83deg, #adbb2a -8.78%, #fbffda 169.09%, #f3ff47 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-ground {
+    color: #adbb2a;
+}
+
+.border-ground {
+    border-color: #adbb2a;
+}
+
+/* ----------------------------------------------------              type ROCK        ------------------------------------ */
+
+.bg-rock {
+    background: linear-gradient(176.83deg, #665927 -8.78%, #fbffda 169.09%, #5d501e 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-rock {
+    color: #665927;
+}
+
+.border-rock {
+    border-color: #665927;
+}
+
+/* ----------------------------------------------------              type BUG        ------------------------------------ */
+
+.bg-bug {
+    background: linear-gradient(176.83deg, #248703 -8.78%, #fbffda 169.09%, #01b929 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-bug {
+    color: #01b929;
+}
+
+.border-bug {
+    border-color: #248703;
+}
+
+/* ----------------------------------------------------              type GHOST        ------------------------------------ */
+
+.bg-ghost {
+    background: linear-gradient(176.83deg, #ebb3fe -8.78%, #fbffda 169.09%, #613567 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-ghost {
+    color: #613567;
+}
+
+.border-ghost {
+    border-color: #613567;
+}
+
+/* ----------------------------------------------------              type ELECTRIC        ------------------------------------ */
+
+.bg-electric {
+    background: linear-gradient(176.83deg, #e9ef34 -8.78%, #fbffda 169.09%, #b9cb1d 242.33%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-electric {
+    color: #b9cb1d;
+}
+
+.border-electric {
+    border-color: #e9ef34;
+}
+
+/* ----------------------------------------------------              type FIRE        ------------------------------------ */
+
+.bg-fire {
+    background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-fire {
+    color: #E35825;
+}
+
+.border-fire {
+    border-color: #E35825;
+}
+
+/* ----------------------------------------------------              type WATER        ------------------------------------ */
+
+.bg-water {
+    background: linear-gradient(176.37deg, #2e66f4 -32.26%, #258ae3 22.55%, #1b9de8 125.72%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-water {
+    color: #2e66f4;
+}
+
+.border-water {
+    border-color: #2e66f4;
+}
+
+
+/* ----------------------------------------------------              type GRASS        ------------------------------------ */
+
+.bg-grass {
+    background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-grass {
+    color: #2f5f59;
+}
+
+.border-grass {
+    border-color: #ABDAC6;
+}
+
+/* ----------------------------------------------------              type PSYCHIC        ------------------------------------ */
+
+.bg-psychic {
+    background: linear-gradient(178.92deg, #7a00eb 0.92%, #ba61f9 47.96%, #731ddc 99.08%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-psychic {
+    color: #731ddc;
+}
+
+.border-psychic {
+    border-color: #731ddc;
+}
+
+
+/* ----------------------------------------------------              type ICE        ------------------------------------ */
+
+.bg-ice {
+    background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-ice {
+    color: #64CBF5;
+}
+
+.border-ice {
+    border-color: #64CBF5;
+}
+
+/* ----------------------------------------------------              type DRAGON        ------------------------------------ */
+
+.bg-dragon {
+    background: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-dragon {
+    color: #478A93;
+}
+
+.border-dragon {
+    border-color: #478A93;
+}
+
+/* ----------------------------------------------------              type DARK        ------------------------------------ */
+
+.bg-dark {
+    background: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-dark {
+    color: #5A5E5D;
+}
+
+.border-dark {
+    border-color: #5A5E5D;
+}
+
+
+/* ----------------------------------------------------              type FAIRY        ------------------------------------ */
+
+.bg-fairy {
+    background: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.color-fairy {
+    color: #C23867;
+}
+
+.border-fairy {
+    border-color: #C23867;
+}
